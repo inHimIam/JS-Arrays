@@ -5,7 +5,9 @@ var arr = [10,20,30];
 //Create a function named 'first' that is given 'arr' as the argument and  returns the first item in the given array.
 
   //Code Here
-
+function first(arr) {
+  return arr[0];
+}
 
 //Next problem
 
@@ -16,7 +18,9 @@ var arr = [40,50,60];
 
 
   //Code Here
-
+function last(arr) {
+  return arr.pop();
+}
 
 //Next Problem
 
@@ -25,8 +29,18 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 //Create a function named 'looper' that is given family as it's only argument, loops through the given array, and alerts every item in the array.
 
   //Code Here
-
-
+function looper(family) {
+  for (var i = 0; i < family.length; i++) {
+  alert(family[i]);
+  
+  };
+}
+// function looper(family) {
+  //family.forEach(function(name){
+    //code to execute on each item (name) here
+  //})
+  
+//}
 //Next problem
 
 
@@ -34,8 +48,22 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 var letters = ['A', 'B', 'C', 'D', 'E'];
 //Write a function called reversedLooper that is given letters as it's only argument and loops through the given array backwards alerting every item in the array starting at the end.
 
-  //Code Here
-
+function reversedLooper(letters) {
+  for (var i = letters.reverse; i >= 5; i--) {
+    
+    
+    alert(letters.reverse[i]);
+  };
+  
+}
+  //Code Here hint use a for loop
+// function reversedLooper(letters) {
+//     letters = letters.reverse();
+//     letters.forEach(function(letter){
+//       alert(letter);
+//     });
+  
+// }
 
 //Next Problem
 
@@ -44,7 +72,14 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 //Write a function named evenFinder that is given nums as it's only argument and removes all values that aren't even from the given array.
 
   //Code Here
-
+function evenFinder(nums) {
+ nums.forEach(function (item, index) {
+   if (item % 2 === 0) {
+     nums.splice(index, 1);
+     return nums;
+    };
+   })
+  } 
 
 //Next problem
 
